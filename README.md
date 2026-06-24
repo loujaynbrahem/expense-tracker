@@ -1,8 +1,4 @@
-\[!\[CI -Build Docker Image](https://github.com/loujaynbrahem/expense-tracker/actions/workflows/ci.yml/badge.svg)](https://github.com/loujaynbrahem/expense-tracker/actions/workflows/ci.yml)
+[![CI -Build Docker Image](https://github.com/loujaynbrahem/expense-tracker/actions/workflows/ci.yml/badge.svg)](https://github.com/loujaynbrahem/expense-tracker/actions/workflows/ci.yml)
 
-
-
-\# Expense Tracker
-
-
-
+# Expense Tracker
+Projet DevOps 
