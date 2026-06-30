@@ -36,7 +36,10 @@ def index():
     category_breakdown = []
     for cat, amt in category_totals.items():
         percentage = (amt / total * 100) if total > 0 else 0
-        category_breakdown.append({'category': cat, 'amount': amt, 'percentage': percentage})
+        category_breakdown.append({
+            'category': cat,
+            'amount': amt,
+            'percentage': percentage})
 
     return render_template(
         'index.html',
@@ -60,13 +63,19 @@ def add_expense():
     expenses = load_expenses()
     found = False
     for e in expenses:
-        if (e['date'] == expense_date) and (e['category'] == category) and (e['description'] == description):
+        if (e['date'] == expense_date and
+            e['category'] == category and
+                e['description'] == description):
             e['quantity'] += quantity
             found = True
             break
     if not found:
-        expenses.append({'category': category, 'description': description,
-                         'price': price, 'date': expense_date, 'quantity': quantity})
+        expenses.append({
+            'category': category,
+            'description': description,
+            'price': price,
+            'date': expense_date,
+            'quantity': quantity})
     save_expenses(expenses)
 
     return redirect(url_for('index'))
